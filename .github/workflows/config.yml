@@ -2,12 +2,8 @@ on:
   push:
     branches:
       - main
-
-
  name: NigerIRS PIPELINE
-
 on: push
-
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
