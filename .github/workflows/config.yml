@@ -1,6 +1,6 @@
  name: Niger-IRS PIPELINE
 
-on: push
+on: [push]
 
 jobs:
   cypress-run:
