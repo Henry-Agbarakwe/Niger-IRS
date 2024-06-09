@@ -1,8 +1,4 @@
-on:
-  push:
-    branches:
-      - main
- name: NigerIRS PIPELINE
+name: NigerIRS PIPELINE
 on: push
 jobs:
   cypress-run:
