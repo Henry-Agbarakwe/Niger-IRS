@@ -30,6 +30,7 @@ class taxPaya{
         cy.get('#mui-component-select-unionMembership').click()
         cy.get("body > div:nth-child(5) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(1) > div:nth-child(1)").click()
         cy.get("input[placeholder='Name of Landlord']").type('Royce')
+        cy.get("input[type='file']").attachFile('QA3.png')
         cy.get("button[type='submit']").click()
         cy.get("input[value='false'][name='hasBankAccount']").click()
         cy.get("#mui-component-select-distanceFromHomeToHealthCare").click()
@@ -43,7 +44,37 @@ class taxPaya{
         cy.get("input[placeholder='Development Levy']").type('20,000')
         cy.get("button[type='submit']").click()
         cy.get("button[type='submit']").click()
+        cy.contains('View Notice Demand').click()
+        cy.contains ('Taxpayers').click()
+        cy.get(':nth-child(3) > .gap-3 > :nth-child(1)').click()
+        cy.get("tbody tr:nth-child(1) td:nth-child(1)").click()
+        // £dit Tax payer record ---
+        cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] !bg-white !text-gray-800 !border-solid !border-[1px] !border-gray-200 focus:!bg-gray-10 focus:!font-medium css-4aj8hq']").click()
+        cy.get("input[placeholder='Other Name']").type('Kalu')
+        cy.get("button[type='submit']").click()
+        cy.get("input[placeholder='Number of employees']").type('40')
+        cy.get("button[type='submit']").click()
+        cy.get("button[type='submit']").click()
+        cy.get("button[type='submit']").click()
+        cy.contains ('Taxpayers').click()
+        // View invoice history ---
+        cy.get(':nth-child(1) > .sticky > div > .text-gray-500').click()
+        cy.get('.relative.gap-6 > .relative > :nth-child(2)').click()
+        cy.get('.divide-y > :nth-child(1) > :nth-child(1)').click()
+        cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] !bg-white !text-gray-800 !border-solid !border-[1px] !border-gray-200 focus:!bg-gray-10 focus:!font-medium css-4aj8hq']").click()
+        // Actions - Reassesss Tax payer
+        cy.get("svg[stroke='currentColor'][fill='currentColor']").click()
+        cy.get('.MuiList-root > ul > :nth-child(1)').click()
+        cy.get("input[name='recommendAmount'").click()
+        cy.get("input[value='25,000'][name='recommendedPersonalIncomeTax']").clear().type('30,000')
+        cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] w-full css-4aj8hq']").click()
+        cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] w-full css-4aj8hq']").click()
 
+        // cy.get("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(2) > main:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2)").click()
+        //cy.get("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(2) > main:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2)").click()
+        //cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] !bg-white !text-gray-800 !border-solid !border-[1px] !border-gray-200 focus:!bg-gray-10 focus:!font-medium css-4aj8hq']").click()
+
+  
     }
 
 }
