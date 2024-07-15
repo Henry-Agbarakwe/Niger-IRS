@@ -74,10 +74,9 @@ class taxPaya{
         cy.get("a[class='grid grid-flow-col items-center justify-start gap-3 px-[14px] py-3 font-semibold transition-[all_.3s] rounded-[6px] hover:bg-[#1118271a] [&.active]:bg-[#11182713] [&.active]:text-[black] active']").click()
         cy.get('.MuiInputBase-input').type ('lola{enter}')
         cy.get(':nth-child(1) > .card-body').should('be.visible')
-    
-
-
-
+        cy.get('.hidden > .font-bold').click()
+        cy.get('.text-base > .grid > :nth-child(2)').click()
+        cy.get('.items-center > .font-bold').should('be.visible')
     }
 
 }
