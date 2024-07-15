@@ -58,7 +58,7 @@ class taxPaya{
         cy.get("button[type='submit']").click()
         cy.contains ('Taxpayers').click()
         // View invoice history ---
-        cy.get(':nth-child(1) > .sticky > div > .text-gray-500').click()
+        cy.get(':nth-child(1) > .sticky > div > .text-gray-500').should('be.visible').click()
         cy.get('.relative.gap-6 > .relative > :nth-child(2)').click()
         cy.get('.divide-y > :nth-child(1) > :nth-child(1)').click()
         cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] !bg-white !text-gray-800 !border-solid !border-[1px] !border-gray-200 focus:!bg-gray-10 focus:!font-medium css-4aj8hq']").click()
@@ -69,12 +69,15 @@ class taxPaya{
         cy.get("input[value='25,000'][name='recommendedPersonalIncomeTax']").clear().type('30,000')
         cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] w-full css-4aj8hq']").click()
         cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] w-full css-4aj8hq']").click()
+        //Fiter action
+        cy.get("a[class='grid grid-flow-col items-center justify-start gap-3 px-[14px] py-3 font-semibold transition-[all_.3s] rounded-[6px] hover:bg-[#1118271a] [&.active]:bg-[#11182713] [&.active]:text-[black] active']").click()
+        cy.get("a[class='grid grid-flow-col items-center justify-start gap-3 px-[14px] py-3 font-semibold transition-[all_.3s] rounded-[6px] hover:bg-[#1118271a] [&.active]:bg-[#11182713] [&.active]:text-[black] active']").click()
+        cy.get('.MuiInputBase-input').type ('lola{enter}')
+        cy.get(':nth-child(1) > .card-body').should('be.visible')
+    
 
-        // cy.get("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(2) > main:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2)").click()
-        //cy.get("body > div:nth-child(2) > section:nth-child(1) > div:nth-child(2) > main:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2)").click()
-        //cy.get("button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary !min-w-[6rem] !bg-white !text-gray-800 !border-solid !border-[1px] !border-gray-200 focus:!bg-gray-10 focus:!font-medium css-4aj8hq']").click()
 
-  
+
     }
 
 }
